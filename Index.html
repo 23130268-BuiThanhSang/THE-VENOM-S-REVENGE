@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>The Venom's Revenge</title>
-    <link rel="stylesheet" href="SCSS/Style.css">
+    <link rel="stylesheet" href="Style.css">
+
 </head>
 <body>
-<canvas id="Game">
-
-</canvas>
+<main id="Game">
+<section id="menu" class="screen">
+    <div class = "menuBackground"></div>
+    <div class = "menuOverlay"></div>
+    <div class="menuContent">
+        <h1 class="gameTitle">THE VENOM'S REVENGE</h1>
+        <nav class="menuButtons">
+            <button id="playButton" class="menuButton"> Play Game</button>
+            <button id="chaptersButton"class="menuButton">Select Chapters</button>
+            <button id="storyButton" class="menuButton">Story</button>
+        </nav>
+    </div>
+</section>
+    <section id="Village" class="screen" hidden>
+        <header class="gameHeader">
+            <h2>VILLAGE</h2>
+            <div class="gameStates">
+                <span>Score:<strong id="score">0</strong></span>
+                <span>Mice:<strong id="mouseEaten">0</strong></span>
+            </div>
+        </header>
+        <canvas id="gameCanvas"></canvas>
+        <p class="gameHint">
+            Move:Arrow key/ WASD
+        </p>
+        <button id="backToMenu" type="button">
+            Back To Menu
+        </button>
+    </section>
+</main>
+<script type="module" src="JS/Main.js"></script>
 </body>
-<script src="JS/Data.js"></script>
-<script src="JS/Render.js"></script>
-<script src="JS/Main.js"></script>
 </html>
